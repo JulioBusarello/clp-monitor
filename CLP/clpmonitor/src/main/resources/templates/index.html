@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Monitoramento de CLPs</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/estilo.css}" />
+</head>
+
+<body>
+    <div class="container1">
+        <h1>Leitura da bancada</h1>
+
+        <h2>Estoque (28 espaços)</h2>
+        <div id="clp1-grid" class="grid"></div>
+
+        <button class="update" onclick="updateEstoque()">Atualizar</button>
+
+        <h2>Expedição (12 espaços)</h2>
+        <div id="expedition-grid" class="grid expedition-grid"></div>
+        <button class="update" onclick="updateExpedicao()">Atualizar</button>
+    </div>
+
+    <div class="container2">
+        <div class="clp-write-section" id="clp-write-container" th:replace="fragments/formulario :: clp-write-fragment">
+        </div>
+    </div>
+    
+    <script th:src="@{/js/script.js}"></script>
+</body>
+
+</html>
